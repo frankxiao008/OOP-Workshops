@@ -1,0 +1,31 @@
+// Workshop 1 - Linkage, Storage Duration, Namespaces, and OS Interface
+
+//Student id: 140777178
+
+//Name:		Saihong(Frank) Xiao
+
+//Email:	sixao15@myseneca.ca
+
+//Date:		2019/01/14
+//String.cpp
+
+
+Internal linkage is the variable which is only visible only in the
+translation unit in which is declared. for example, the static variable
+itemno in my CString.cpp file. However, external linkage means that variable
+declared in one translation unit is visible to other translation unit. 
+In our workshop, we declare the variable INITIAL globally, which is a external
+linkage. We declare and definite it in the w1.cpp file, but can use it in the
+CString.cpp file, which is in the CString translation unit.
+
+	In the process() function, we use the one argument constructor function
+to create an tempory CString object, and assign it to a CString object named a.
+The effect is actually received the string from the command line, and then store
+it in a local variable in process module and then output it.
+
+	In order to receive a string in any length, we need to allocate dynamic
+memory to the String object we defined.so we first use the strlen function to
+get the length of the string we received, and then allocated memory size plus one
+accordingly, then store the string in the String object.
+
+	
