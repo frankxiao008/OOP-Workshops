@@ -23,7 +23,7 @@
     <ProjectGuid>{9E4EFA74-CC83-4255-AFF2-65665E193FB7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>athome</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -142,10 +142,12 @@
     <ClInclude Include="iProduct.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="Sale.h" />
+    <ClInclude Include="TaxableProduct.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Product.cpp" />
     <ClCompile Include="Sale.cpp" />
+    <ClCompile Include="TaxableProduct.cpp" />
     <ClCompile Include="w6.cpp" />
   </ItemGroup>
   <ItemGroup>
