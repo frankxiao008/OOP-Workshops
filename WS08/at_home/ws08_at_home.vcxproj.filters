@@ -15,31 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="w4.cpp">
+    <ClInclude Include="List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Element.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Message.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MessagePack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Notifications.cpp">
+    <ClCompile Include="w8.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="w4_test.dat" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Message.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MessagePack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Notifications.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <None Include="BadPrices.dat">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Descriptions.dat">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Prices.dat">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
