@@ -1,0 +1,12 @@
+// Workshop 8 - Smart Pointers
+// reflection
+// Saihong Xiao 140777178
+// 2019/03/23
+
+
+The advantage of smart pointer is that you do not need to deal with the memory deallocation.
+The smart pointer would do it as soon as the smart pointer itself goes out of scope.
+
+The difference between raw and smart pointer sytax in my solution is that
+in the mergeRaw function, when using the raw pointer, I need to delete the memory manually.
+However, in the smart pointer, I do not need to deal with the memory.
