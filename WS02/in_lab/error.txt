@@ -1,0 +1,67 @@
+Timekeeper.cpp: In member function 'void sict::Timekeeper::stop()':
+Timekeeper.cpp:22:41: warning: variable 'endTime' set but not used [-Wunused-but-set-variable]
+   std::chrono::steady_clock::time_point endTime = std::chrono::steady_clock::now();
+                                         ^~~~~~~
+Timekeeper.cpp: In member function 'void sict::Timekeeper::report(std::ostream&) const':
+Timekeeper.cpp:46:6: error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'const char [17]')
+   os << "Execution Times:" << std::endl;
+   ~~~^~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/local/gcc/8.2.0/include/c++/8.2.0/bits/basic_string.h:48,
+                 from /usr/local/gcc/8.2.0/include/c++/8.2.0/string:52,
+                 from Timekeeper.h:9,
+                 from Timekeeper.cpp:6:
+/usr/local/gcc/8.2.0/include/c++/8.2.0/string_view:545:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)'
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/local/gcc/8.2.0/include/c++/8.2.0/string_view:545:5: note:   template argument deduction/substitution failed:
+Timekeeper.cpp:46:9: note:   mismatched types 'std::basic_string_view<_CharT, _Traits>' and 'const char*'
+   os << "Execution Times:" << std::endl;
+         ^~~~~~~~~~~~~~~~~~
+In file included from /usr/local/gcc/8.2.0/include/c++/8.2.0/string:52,
+                 from Timekeeper.h:9,
+                 from Timekeeper.cpp:6:
+/usr/local/gcc/8.2.0/include/c++/8.2.0/bits/basic_string.h:6314:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/local/gcc/8.2.0/include/c++/8.2.0/bits/basic_string.h:6314:5: note:   template argument deduction/substitution failed:
+Timekeeper.cpp:46:9: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>' and 'const char [17]'
+   os << "Execution Times:" << std::endl;
+         ^~~~~~~~~~~~~~~~~~
+Timekeeper.cpp:46:36: error: 'endl' is not a member of 'std'
+   os << "Execution Times:" << std::endl;
+                                    ^~~~
+Timekeeper.cpp:46:36: note: 'std::endl' is defined in header '<ostream>'; did you forget to '#include <ostream>'?
+Timekeeper.cpp:7:1:
++#include <ostream>
+ 
+Timekeeper.cpp:46:36:
+   os << "Execution Times:" << std::endl;
+                                    ^~~~
+Timekeeper.cpp:48:7: error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'std::chrono::duration<long int, std::ratio<1, 1000000000> >::rep' {aka 'long int'})
+    os << record[recordNum].dura.count() << record[recordNum].timeUnit << std::endl;
+    ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/local/gcc/8.2.0/include/c++/8.2.0/bits/basic_string.h:48,
+                 from /usr/local/gcc/8.2.0/include/c++/8.2.0/string:52,
+                 from Timekeeper.h:9,
+                 from Timekeeper.cpp:6:
+/usr/local/gcc/8.2.0/include/c++/8.2.0/string_view:545:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)'
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/local/gcc/8.2.0/include/c++/8.2.0/string_view:545:5: note:   template argument deduction/substitution failed:
+Timekeeper.cpp:48:39: note:   mismatched types 'std::basic_string_view<_CharT, _Traits>' and 'long int'
+    os << record[recordNum].dura.count() << record[recordNum].timeUnit << std::endl;
+                                       ^
+In file included from /usr/local/gcc/8.2.0/include/c++/8.2.0/string:52,
+                 from Timekeeper.h:9,
+                 from Timekeeper.cpp:6:
+/usr/local/gcc/8.2.0/include/c++/8.2.0/bits/basic_string.h:6314:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/local/gcc/8.2.0/include/c++/8.2.0/bits/basic_string.h:6314:5: note:   template argument deduction/substitution failed:
+Timekeeper.cpp:48:39: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>' and 'std::chrono::duration<long int, std::ratio<1, 1000000000> >::rep' {aka 'long int'}
+    os << record[recordNum].dura.count() << record[recordNum].timeUnit << std::endl;
+                                       ^
+Timekeeper.cpp:48:79: error: 'endl' is not a member of 'std'
+    os << record[recordNum].dura.count() << record[recordNum].timeUnit << std::endl;
+                                                                               ^~~~
+Timekeeper.cpp:48:79: note: 'std::endl' is defined in header '<ostream>'; did you forget to '#include <ostream>'?

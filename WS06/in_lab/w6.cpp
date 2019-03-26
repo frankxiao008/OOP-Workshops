@@ -3,7 +3,7 @@
 // Chris Szalwinski
 // 2019/03/03
 
-#include <iostream>
+#include <iostream> 
 #include <string>
 #include "Sale.h"
 

@@ -24,6 +24,9 @@
     <ClInclude Include="Sale.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TaxableProduct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Product.cpp">
@@ -35,8 +38,13 @@
     <ClCompile Include="w6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TaxableProduct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Sales.dat" />
+    <None Include="Sales.dat">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

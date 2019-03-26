@@ -1,0 +1,25 @@
+//Workshop 6-Sale.cpp
+//Name:		Saihong Xiao
+//Student ID:	140777178
+//Email:	sxiao15@myseneca.ca
+//
+
+
+
+The main reason that we using the vector container is that vector is more flexiable than other kind of available container such as array. Since vector is resizable, you do not need to consider about its size when declare a vector, its size will increase accordingly as we use push_back() function to add anoter more element. other containers such as array, its size is statically allocated, it's size is fixed at the moment of it declaration. 
+
+In this workshop, the vector can manage its size, so there is no need for me to deallocate the memory 
+
+The range based for simplify the coding in two aspects:
+First, with the 'auto' keyword, I do not need to worried about the type of the elements in the container. 
+Second, I do not need to care about the number of the elements in the contaner. This two things make it much easier to coding.
+
+		for (auto i : productvector ) {
+			if (i->price() > 0) {
+
+				i->display(os);
+				os << std::endl;
+				total += i->price();
+			  }	
+		};
+
