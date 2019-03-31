@@ -2,6 +2,7 @@
 // SecureData.h
 // Chris Szalwinski after Cornel Barna
 // 2019/03/19
+// 
 
 #ifndef SICT_SECUREDATA_H
 #define SICT_SECUREDATA_H
