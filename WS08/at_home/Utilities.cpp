@@ -16,6 +16,9 @@ namespace sict {
 		// TODO: Add your code here to build a list of products
 		//         using raw pointers
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 		for (std::size_t i = 0; i < desc.size(); i++) {
 			for (std::size_t j = 0; j < price.size(); j++) {
 				if (desc[i].code == price[j].code) {
@@ -28,10 +31,13 @@ namespace sict {
 
 			}
 		}
+<<<<<<< HEAD
 =======
 
 
 
+=======
+>>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 
 
 >>>>>>> f443379f2590b99b2e26ef5069fdb88fb237bc44
@@ -44,6 +50,9 @@ namespace sict {
 		// TODO: Add your code here to build a list of products
 		//         using smart pointers
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 		for(std::size_t i=0; i<desc.size(); i++)
 			for (std::size_t j = 0; j < price.size(); j++) {
 				if (desc[i].code == price[j].code) {
@@ -52,6 +61,7 @@ namespace sict {
 					priceList += p;
 				}
 			}
+<<<<<<< HEAD
 =======
 
 
@@ -59,6 +69,8 @@ namespace sict {
 
 
 >>>>>>> f443379f2590b99b2e26ef5069fdb88fb237bc44
+=======
+>>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 
 		return priceList;
 	}

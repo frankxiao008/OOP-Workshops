@@ -5,6 +5,7 @@
 // sxiao15@myseneca.ca
 // 2019/02/05
 
+<<<<<<< HEAD
 #include <utility>
 #include "MessagePack.h"
 
@@ -100,4 +101,10 @@ namespace sict {
 		return  os;
 	}
 	
+=======
+#include "MessagePack.h"
+
+namespace sict {
+
+>>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 }

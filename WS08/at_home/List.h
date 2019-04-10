@@ -35,10 +35,14 @@ namespace sict {
 		// TODO: Overload the += operator with a smart pointer
 		//       as a second operand.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 		void operator += (std::unique_ptr<T>& t) {
 			list.push_back(*t);
 			
 		}
+<<<<<<< HEAD
 
 		// TODO: Overload the += operator with a raw pointer
 		//       as a second operand.
@@ -56,6 +60,16 @@ namespace sict {
 		//       as a second operand.
 
 >>>>>>> f443379f2590b99b2e26ef5069fdb88fb237bc44
+=======
+
+		// TODO: Overload the += operator with a raw pointer
+		//       as a second operand.
+		void operator +=(T* t) {
+			if (t)
+				list.push_back(*t);
+		
+		}
+>>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 
 
 
