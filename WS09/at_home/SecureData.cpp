@@ -65,20 +65,14 @@ namespace sict {
 
 	void SecureData::code(char key) {
 
-		/*auto f = std::bind(converter, text, key, nbytes, Cryptor());
-
-		std::thread t1(f);
-		std::thread t2(f);*/
+	
 		thread t1(converter, text, key, nbytes, Cryptor());
 		thread t2(converter, text, key, nbytes, Cryptor());
-
 
 		encoded = !encoded;
 		
 		t1.join();
 		t2.join();
-		//converter(text, key, nbytes, Cryptor());
-		
 		
 	}
 
