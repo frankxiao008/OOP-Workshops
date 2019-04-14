@@ -43,20 +43,13 @@ namespace sict {
 	public:
 		V accumulate(const L& label) const {
 			
-			V SumValue = SummableLVPair<L, V>::getInitialValue();
-
-				
+			V SumValue = SummableLVPair<L, V>::getInitialValue();				
 				for(size_t i=0; i<((List<T, N>&)*this).size(); i++){
 					SumValue =(*this)[i].sum(label, SumValue);
-				}
-			
+				}		
 			return SumValue;
-		}
-		
+		}		
 	};
-
-
-
 
 }
 

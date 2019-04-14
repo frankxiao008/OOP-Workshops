@@ -13,7 +13,6 @@
 namespace sict {
 
 	class MessagePack {
-<<<<<<< HEAD
 		Message** message=nullptr;
 		size_t number=0;
 
@@ -21,12 +20,6 @@ namespace sict {
 
 		MessagePack();
 		MessagePack( Message** ms, int num );
-=======
-		Message* message;
-
-	public:
-		MessagePack();
->>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 		MessagePack(const MessagePack&);
 		MessagePack( MessagePack&&);
 		MessagePack& operator = (const MessagePack&);

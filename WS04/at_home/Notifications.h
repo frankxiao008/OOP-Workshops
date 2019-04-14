@@ -9,7 +9,6 @@
 #ifndef SICT_NOTIFY_H
 #define SICT_NOTIFY_H
 
-<<<<<<< HEAD
 #include"Message.h"
 namespace sict {
 	class Notifications {
@@ -31,9 +30,6 @@ namespace sict {
 
 	};
 	std::ostream& operator<<(std::ostream&, Notifications&);
-=======
-namespace sict {
->>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 
 
 }

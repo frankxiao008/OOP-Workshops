@@ -1,0 +1,68 @@
+// Workshop  - Containers
+// reflect.txt
+// Saihong Xiao
+// 140777178
+// 2019/02/09
+
+
+1. The MessagePack module is a composition. When I implementation it, I need to allocate
+   Dynamic memory for the Message objects. The MessagePack have total ownership of the 
+   Message objects. This means that it is responsible for the creation and destruction of
+   the Message objects. When the MessagePack object don’t exists, so does the Message 	     objects. So in the implement of MessagePack class, we need to allocate memory for the Message objects. When also need to deallocate memory for the Message object in the MessagePack objects.   
+if (!ms[i]->empty()) {
+					//message[i] = const_cast<Message*>(ms[i]);
+					message[number] = new Message;
+					*message[number] = *ms[i];
+					number++;
+				}
+So here we allocate memory and do a deep copy of the Message objects.
+In the destruction of the MessagePack objects, it is also responsible for the destruction of the Messages objects, which are owned by the MessagePack.
+	//destructor
+	//
+	MessagePack::~MessagePack() {
+        while(number >0){
+            delete message[number-1];
+            number--;
+        }
+        delete[] message;
+	}
+
+
+However, in the Notifications class, it is a aggregation relationship between the Notifications and Message objects. So there I do not need to allocate dynamic memory
+For the Message objects. In the constructor of Notifications, there is only the memory allocation for the array of the Message*, the pointers. No memory allocation for the Message objects.   So after the destruction of the Notifications, the Message objects which
+Have ever been owned by the Notifications still exists.
+
+
+So in the copy of the MessagePack objects, we need to deallocate the memory for the Messages objects, and not only do the shallow copy, but also do a deep copy for each Message objects. 
+for(size_t i=0; i<number; i++)
+			delete message[i];
+			delete[] message;
+			number = msgpack.number;
+			message = new Message*[number];
+
+			for (size_t i = 0; i < number; i++) {
+				message[i] = new Message;	
+				*(message[i]) = *(msgpack.message[i]);
+			}
+However, in the move function, we only need to do the shallow copy, which means that we only need to copy the address.
+
+In the Notifications objects, when we do the deep copy for the Message object pointer array. We do not do the deep copy for the move function of the Message objects 
+Notifications& Notifications::operator=(Notifications&& notification) {
+		if (this != &notification) {
+			delete[] msgptrptr;
+			Max = notification.Max;
+			currentNum = notification.currentNum;
+			msgptrptr = notification.msgptrptr;
+			notification.msgptrptr = nullptr;
+			notification.Max = 0;
+			notification.currentNum = 0;
+
+
+		}
+		return *this;
+
+	}
+
+Quiz correction:
+All the questions are correct. No correction.
+ 

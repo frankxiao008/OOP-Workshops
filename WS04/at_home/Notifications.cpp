@@ -6,15 +6,11 @@
 // 2019/02/07
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 #include "Notifications.h"
 
 namespace sict {
 
-<<<<<<< HEAD
 	Notifications::Notifications() {
 		msgptrptr= nullptr;
 		Max = 0u;
@@ -109,6 +105,4 @@ namespace sict {
 		notification.diplay(os);
 		return os;
 	}
-=======
->>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 }

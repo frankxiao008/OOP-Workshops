@@ -4,18 +4,17 @@
 // 140777178
 // sxiao15@myseneca.ca
 // 2019/02/05
-
-
 #include <iostream>
 #include <string>
 #include "Message.h"
+
 
 namespace sict {
 
 	//Defaultor constructor
 	//
-	Message::Message() :User(), Reply(), Tweet() {
-
+	Message::Message():User(), Reply(), Tweet(){
+	
 	}
 	//Constructor with one argument
 	//
@@ -23,7 +22,7 @@ namespace sict {
 		std::size_t found = str.find(' ');
 		if (found != std::string::npos) {
 			User = str.substr(0, found);
-
+			
 			if (str.find('@', found + 1) == found + 1) {
 				size_t length = str.find(' ', found + 2) - (found + 2);
 				Reply = str.substr(found + 2, length);
@@ -31,7 +30,7 @@ namespace sict {
 			}
 
 			Tweet = str.substr(found + 1);
-
+		
 		}
 		else {
 			*this = Message();
@@ -48,16 +47,12 @@ namespace sict {
 	//
 	void Message::display(std::ostream& os)const {
 		if (!empty()) {
-			os << "User  : " << User << std::endl;
-			if (!Reply.empty())
-				os << "Reply : " << Reply << std::endl;
-			os << "Tweet : " << Tweet << std::endl;
+			os << ">User  : " << User << std::endl;
+			if(!Reply.empty())
+				os << " Reply : " << Reply << std::endl;
+			os << " Tweet : " << Tweet << std::endl;
 		}
 	}
 
 
 }
-
-
-
-

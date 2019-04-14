@@ -5,7 +5,6 @@
 // sxiao15@myseneca.ca
 // 2019/02/05
 
-<<<<<<< HEAD
 #include <utility>
 #include "MessagePack.h"
 
@@ -25,8 +24,9 @@ namespace sict {
 			for (int i = 0; i < num; i++) {
 				if (!ms[i]->empty()) {
 					//message[i] = const_cast<Message*>(ms[i]);
-					message[number] = new Message;
-					*message[number] = *ms[i];
+					//message[number] = new Message;
+					//*message[number] = *ms[i];
+					message[number] = new Message(*ms[i]);
 					number++;
 				}
 			}
@@ -80,6 +80,8 @@ namespace sict {
 	//destructor
 	//
 	MessagePack::~MessagePack() {
+		for (size_t i = 0; i < number; i++)
+			delete message[i];
 		delete[] message;
 	}
 	//Display functoin
@@ -101,10 +103,4 @@ namespace sict {
 		return  os;
 	}
 	
-=======
-#include "MessagePack.h"
-
-namespace sict {
-
->>>>>>> 191f4c53c87b82fb772e8bc8bc95a0fc8d79117c
 }

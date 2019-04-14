@@ -29,9 +29,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="w4_test.dat" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Message.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -41,5 +38,10 @@
     <ClInclude Include="Notifications.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="w4_test.dat">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
