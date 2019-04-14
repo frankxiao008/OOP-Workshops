@@ -1,9 +1,15 @@
+// Workshop  - tempplate
+// List.h
+// Saihong Xiao
+// 140777178
+// 2019/02/02
 
 
-#define _CRT_SECURE_NO_WARNINGS
+
 
 #ifndef SICT_LIST_H
 #define SICT_LIST_H
+#include "LVPair.h"
 
 namespace sict {
 	template <typename T, size_t N>
@@ -16,7 +22,7 @@ namespace sict {
 			}
 
 			const T& operator[](size_t i)const {
-			
+				//if (i < N)
 					return a[i];
 				
 			}
@@ -27,8 +33,31 @@ namespace sict {
 					num++;
 				}
 			}
-
 	};
+
+	//template for the lVList derived class
+	//
+	template<typename T, typename L, typename V, size_t N>
+	class LVList : public List<T, N> {
+		
+	public:
+		V accumulate(const L& label) const {
+			
+			V SumValue = SummableLVPair<L, V>::getInitialValue();
+
+				
+				for(size_t i=0; i<((List<T, N>&)*this).size(); i++){
+					SumValue =(*this)[i].sum(label, SumValue);
+				}
+			
+			return SumValue;
+		}
+		
+	};
+
+
+
+
 }
 
 

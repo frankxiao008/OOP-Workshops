@@ -1,0 +1,30 @@
+// Workshop  - tempplate
+// reflect.txt
+// Saihong Xiao
+// 140777178
+// 2019/02/02
+
+
+1. The reason why we need to specialize the sum() member function is that when we sum up 
+    SummableLVPair<std::string, std::string> elements, we need to define a different way. 
+    We want to have our special way of sum. The code example is on the below.
+    	template<>
+	std::string SummableLVPair<std::string,std::string>::sum(const std::string& label, const std::string& sum) const {
+		return sum + " " + LVPair<std::string, std::string>::getValue();
+	}
+
+    For the initial value, we also need to specialize them, since for a int type, the initial
+    value 0 is suitable, however, for an string type, empty string should be '\0'. So that is the
+    reason why we need to do this. 
+
+	template<>
+	int SummableLVPair<std::string, int>::D_Value = 0;
+
+	template<>
+	std::string SummableLVPair<std::string, std::string>::D_Value = "\0";
+
+    We define the class variable out side the class definition because this is a special case. we need to
+    specialize it. Only the generic rules and values can be defined in the class template. 
+    However, we can define a class variable after we instantiate a class template.
+
+
